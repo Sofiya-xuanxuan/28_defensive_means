@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const distinct = arr => arr.filter((element, index, self) => {
+            console.log(element, index, self);
+
+            return self.indexOf(element) === index;
+        });
+
+        let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
+        distinct(arr); // [1, 2, 3, 5, 4]
+        var singleNumber = function (nums) {
+
+            let number = 0;
+            for (let i = 0; i < nums.length; i++) {
+                console.log(nums[i], 'wwwwwww');
+
+                number ^= nums[i];
+
+                console.log(number ^= nums[i], 'hhhhhh');
+
+                console.log(number);
+
+            }
+            return number;
+        };
+
+        console.log(singleNumber([1, 2, 2, 3, 3, 4, 1]));
+
+
+
+        //1  3  1  2  1  5  4
+    </script>
+</body>
+
+</html>
